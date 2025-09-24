@@ -1,0 +1,8 @@
+from random import randint
+
+checklist = [randint(1, 1000) for i in range(15)]
+for index_1 in range(len(checklist) - 1):
+    for index_2 in range(index_1 + 1, len(checklist)):
+        if checklist[index_1] > checklist[index_2]:
+            checklist[index_1], checklist[index_2] = checklist[index_2], checklist[index_1]
+print(*checklist)
