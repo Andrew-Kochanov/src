@@ -40,6 +40,3 @@ def heap_sort(array):
 
 
 
-# a = [1,32253,3,533,5,0]
-# heap_sort(a)
-# print(a)
