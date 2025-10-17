@@ -1,0 +1,54 @@
+26 aur/amd-disable-c6 1.0-1 (+0 0.00) 
+    Disable AMD C6 state on boot to prevent Ryzen freezes
+25 aur/saturn-git 1.1.1.r4.g310bd4d-1 (+0 0.00) 
+    Your go-to ToS Compliant Custom Deezer Client - Freezer Reborn
+24 aur/netdata-v1 2.2.6-3 (+0 0.00) 
+    Real-time performance monitoring. Freeze the version on 2.2.6 since version 2.3.0 has deprecated UI v1
+23 aur/strix-claw r6.78eef095b3-1 (+0 0.00) (сирота в AUR) 
+    Daemon that prevents freezes of Asus Strix Claw mice
+22 aur/pip-chill 1.0.3-1 (+0 0.00) 
+    A more relaxed pip freeze
+21 aur/hyprfreeze-git 1.1.2.r2.6b67416-2 (+1 0.00) 
+    Utility to suspend a game process (and other programs) in Hyprland
+20 aur/saturn-bin 1.1.1-2 (+1 0.00) 
+    Your go-to ToS Compliant Custom Deezer Client - Freezer Reborn
+19 aur/obs-freeze-filter 0.3.5-1 (+1 0.00) 
+    Filter to freeze a frame of a source
+18 aur/python-cx-freeze 8.4.1-1 (+1 0.00) 
+    Create standalone executables from Python scripts
+17 aur/python-frozen-flask 1.0.2-1 (+0 0.00) 
+    Freezes a Flask application into a set of static files
+16 aur/still 0.0.7-1 (+1 0.75) 
+    Freeze the screen of a Wayland compositor until a provided command exits
+15 aur/linux-baytrail49-docs 4.9.330.315.057159bf2-1 (+3 0.00) (устарел: 2025-03-20) 
+    Kernel hackers manual - HTML documentation that comes with the Linux-baytrail49 kernel with baytrail freeze fixes
+14 aur/linux-baytrail49-headers 4.9.330.315.057159bf2-1 (+3 0.00) (устарел: 2025-03-20) 
+    Header files and scripts for building modules for Linux-baytrail49 kernel with baytrail freeze fixes
+13 aur/linux-baytrail49 4.9.330.315.057159bf2-1 (+3 0.00) (устарел: 2025-03-20) 
+    The Linux-baytrail49 with baytrail freeze fixes and integrated RTL8723BS WIFI driver + kernel and modules
+12 aur/helm-freeze 1.1.0-1 (+0 0.00) 
+    Freeze your charts in the wished versions
+11 aur/nora 0.2.0-1 (+1 0.00) 
+    Freezes the screen for another program
+10 aur/python-opentype-feature-freezer 1.32.2-1 (+2 0.00) 
+    Freeze OpenType features in a font
+9 aur/wayfreeze-git r65.8277f98-1 (+1 0.01) 
+    Tool to freeze the screen of a Wayland compositor
+8 aur/python-cx-freeze-git r2066.6cdbad7-1 (+1 0.00) (сирота в AUR) 
+    Create standalone executables from Python scripts (built from latest commit)
+7 aur/rseye-git r39.0babe11-1 (+0 0.00) 
+    Freeze screen regularly to help prevent Repetitive Strain Injury (RSI) and protect the eyes.
+6 aur/freezetag-git r24.89ac8a8-1 (+0 0.00) 
+    A tool that saves, strips, and restores file paths and music metadata.
+5 aur/freeze-bin 0.2.2-1 (+3 0.33) 
+    Generate images of code and terminal output.
+4 extra/python-freezegun 1.5.5-1 (39.6 KiB 176.7 KiB) 
+    Let your Python tests travel through time
+3 extra/perl-freezethaw 0.5001-9 (14.1 KiB 28.6 KiB) 
+    Convert arbitrary objects to/from strings
+2 extra/python-pytest-freezer 0.4.9-1 (6.3 KiB 8.6 KiB) 
+    Pytest plugin providing a fixture interface for freezegun
+1 extra/ruby-ice_nine 0.11.2-6 (19.9 KiB 50.8 KiB) 
+    Deep freeze Ruby objects
+==> Пакеты для установки (пример: 1 2 3, 1-3 или ^4)
+==> 
