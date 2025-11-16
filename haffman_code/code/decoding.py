@@ -2,41 +2,39 @@ import pickle
 import struct
 
 def decode(encoding: str, dictionary: dict[str, str]) -> str:
-    decoding = ''
+    reverse_dict = {value: key for key, value in dictionary.items()}
+    
+    decoded_letters = []
+    current_letter = ""
+    
+    for bit in encoding:
+        current_letter += bit
+        if current_letter in reverse_dict:
+            decoded_letters.append(reverse_dict[current_letter])
+            current_letter = ""
+    
+    return ''.join(decoded_letters)
 
-    i = 0
-    while i < len(encoding):
-        for key in dictionary:
-            value = dictionary[key]
-            if value == encoding[i:len(value) + i]:
-                i += len(value)
-                decoding += key
-                break
-    return decoding
 
-# print(decode('001101', {'1': '00', '3': '01', '2': '1'}))
 
 def decode_file(input_file: str, output_file: str):
-    try:
-        with open(input_file, 'rb') as f:
-            padding = struct.unpack('B', f.read(1))[0]
+    with open(input_file, 'rb') as f:
+        padding = struct.unpack('B', f.read(1))[0]
             
-            table_len = struct.unpack('I', f.read(4))[0]
-            table = f.read(table_length)
-            codes_table = pickle.loads(table_data)
+        table_len = struct.unpack('I', f.read(4))[0]
+        table = f.read(table_len)
+        codes_table = pickle.loads(table)
 
-            encoded_bytes = f.read()
+        encoded_bytes = f.read()
         
-        # Преобразование байтов в битовую строку
-        code = ''.join(f'{byte:08b}' for byte in encoded_bytes)
+    code = ''.join(f'{byte:08b}' for byte in encoded_bytes)
         
-        # Удаление дополнения
-        if padding > 0:
-            code = code[:-padding]
+    if padding > 0:
+        code = code[:-padding]
         
-        # Декодирование
-        decoded_text = decode(code, codes_table)
+    decoded_text = decode(code, codes_table)
         
-        # Сохранение декодированного текста
-        with open(output_file, 'w') as f:
-            f.write(decoded_text)
+    with open(output_file, 'w', encoding="utf-8") as file:
+        file.write(decoded_text)
+
+decode_file("example_none.txt", "example_none_none.txt")

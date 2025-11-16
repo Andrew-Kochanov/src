@@ -53,28 +53,26 @@ def encode(inp: str) -> tuple[str, dict[str, str]]:
     
     return (output_string, dictionary)
 
-# print(encode("1223"))
-
 def encode_file(input_file: str, output_file: str):
-    try:
-        with open(input_file) as file:
-            text = file.read()
+    with open(input_file, "r", encoding="utf-8") as file:
+        text = file.read()
 
-        code, dictionary = encode(text)
-        padding = 8 - len(code) % 8
-        if padding == 8:
-            padding = 0
-        code += 0 * padding
+    code, dictionary = encode(text)
+    padding = 8 - len(code) % 8
+    if padding == 8:
+        padding = 0
+    code += '0' * padding
 
-        encoded_bytes = bytearray()
-        for i in range(0, len(code), 8):
-            byte = code[i:i+8]
-            encoded_bytes.append(int(byte, 2))
+    encoded_bytes = bytearray()
+    for i in range(0, len(code), 8):
+        byte = code[i:i+8]
+        encoded_bytes.append(int(byte, 2))
 
-        with open(output_file, "wb") as file:
-            file.write(struct.pack("B", padding))
-            table = pickle.dumps(dictionary)
-            file.write("I", len(table))
-            file.write(table)
-            f.write(encoded_bytes)
+    with open(output_file, "wb") as file:
+        file.write(struct.pack("B", padding))
+        table = pickle.dumps(dictionary)
+        file.write(struct.pack("I", len(table)))
+        file.write(table)
+        file.write(encoded_bytes)
 
+encode_file("example.txt", "example_none.txt")
