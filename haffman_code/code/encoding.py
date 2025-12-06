@@ -75,4 +75,4 @@ def encode_file(input_file: str, output_file: str):
         file.write(table)
         file.write(encoded_bytes)
 
-encode_file("example.txt", "example_none.txt")
+

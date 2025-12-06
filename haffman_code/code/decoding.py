@@ -37,4 +37,3 @@ def decode_file(input_file: str, output_file: str):
     with open(output_file, 'w', encoding="utf-8") as file:
         file.write(decoded_text)
 
-decode_file("example_none.txt", "example_none_none.txt")
