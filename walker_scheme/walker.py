@@ -5,8 +5,7 @@ class Walker:
     def __init__(self, probabilities: list[tuple[str, float]]):
         self.probabilities = sorted(probabilities, key=lambda x: x[1])
         self.probabilities_walker = [[self.probabilities[i][0], 1 / len(self.probabilities)] for i in range(len(self.probabilities))]
-
-        summa = [probabilities[i][1] for i in range(len(probabilities))]
+        summa = sum[probabilities[i][1] for i in range(len(probabilities))]
         if summa != 1:
             raise ValueError('Сумма вероятностей не равна единице')
 
